@@ -1,0 +1,105 @@
+{
+  "header": {
+    "home": "Início",
+    "about": "Sobre",
+    "gallery": "Galeria",
+    "reviews": "Avaliações",
+    "location": "Localização",
+    "book": "Reservar"
+  },
+  "hero": {
+    "title": "Tapadinho",
+    "subtitle": "Natureza e Piscina · Casa de Campo em Portugal",
+    "cta": "Ver Disponibilidade"
+  },
+  "about": {
+    "title": "Sobre a Propriedade",
+    "description": "A Casa do Tapadinho é uma autêntica vivenda rústica perto da margem sul do Rio Douro, isolada do mundo exterior numa zona rural pacífica e acolhedora — a apenas 1 hora do aeroporto do Porto. A cor verde é imperatriz aqui. Combina o charme e glamour de uma casa de família tradicional com o conforto de todas as comodidades modernas, proporcionando-lhe uma estadia única e agradável entre vinhas e socalcos ou junto à nossa bela piscina.",
+    "areaTitle": "A Região",
+    "areaDescription": "Localizado em Castelo de Paiva, encontrar-se-á rodeado por floresta nativa, colinas e aldeias tradicionais. A região oferece excelente gastronomia local, locais históricos e inúmeras oportunidades para atividades ao ar livre. O Rio Douro está próximo para passeios de barco, e a costa do Porto fica a apenas 40 minutos com belos passadiços de madeira perfeitos para caminhar ou andar de bicicleta."
+  },
+  "amenities": {
+    "pool": "Piscina Privada",
+    "garden": "Jardim",
+    "kitchen": "Cozinha Equipada",
+    "wifi": "Wi-Fi Grátis",
+    "bedrooms": "2 Quartos",
+    "parking": "Estacionamento Grátis",
+    "pets": "Aceita Animais",
+    "views": "Vista Campo"
+  },
+  "gallery": {
+    "title": "Galeria",
+    "categories": {
+      "all": "Tudo",
+      "bedrooms": "Quartos",
+      "kitchen": "Cozinha",
+      "living": "Sala de Estar",
+      "outdoor": "Exterior",
+      "nature": "Natureza"
+    }
+  },
+  "reviews": {
+    "title": "O Que Dizem os Nossos Hóspedes",
+    "rating": "9.6/10 Excecional",
+    "review1": {
+      "text": "Fomos de férias em família e levamos as nossas duas cadelinhas e adorámos! A zona envolvente da casa (floresta nativa) é magnífica, o espaço é super confortável e acolhedor! Tínhamos tudo o que precisávamos. Ainda tivemos oportunidade de tomar o nosso café quentinho numa das mesinhas junto ao lago. Vamos voltar de certeza!",
+      "author": "Ana",
+      "date": "Setembro 2024"
+    },
+    "review2": {
+      "text": "Gostamos de toda a casa, mas a zona que mais preferíamos foi a piscina, onde passamos momentos incríveis em família, com os nossos animais. A piscina não é muito funda, é a altura perfeita.",
+      "author": "Bebiana",
+      "date": "Julho 2024"
+    },
+    "review3": {
+      "text": "Talvez não seja para toda a gente, mas nós sentimos a casa e os arredores como um pequeno paraíso. A casa tem carácter e todo o terreno à sua volta é lindo. É sossegada e tem muito espaço. A piscina é uma verdadeira piscina, e não uma espécie de banheira alargada. A vista é linda.",
+      "author": "Fennis",
+      "date": "Junho 2025"
+    }
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "items": [
+      {
+        "question": "Como chego à propriedade?",
+        "answer": "A propriedade é facilmente acessível de carro, localizada em Casal da Renda, Paraíso, Castelo de Paiva. Forneceremos indicações detalhadas após a reserva. O Aeroporto do Porto (Francisco Sá Carneiro) fica a aproximadamente 1 hora (60 km)."
+      },
+      {
+        "question": "A piscina está disponível todo o ano?",
+        "answer": "A piscina está disponível de maio a outubro. Durante os meses mais frios, os hóspedes podem ainda desfrutar das áreas exteriores, jardim, lareira e da bela envolvente."
+      },
+      {
+        "question": "São permitidos animais de estimação?",
+        "answer": "Sim! Aceitamos animais de estimação bem-comportados. Por favor, informe-nos antecipadamente se traz um amigo peludo. Podem aplicar-se encargos adicionais."
+      },
+      {
+        "question": "O que está incluído no aluguer?",
+        "answer": "O aluguer inclui roupa de cama, toalhas, cozinha totalmente equipada com máquina de lavar loiça, micro-ondas e máquina de café, Wi-Fi, aquecimento, lareira, máquina de lavar roupa, ferro de engomar e acesso a todas as áreas exteriores, incluindo piscina, pátio e churrasqueira."
+      },
+      {
+        "question": "Quais são os horários de check-in e check-out?",
+        "answer": "O check-in é das 15:00 às 22:00 (por favor informe-nos da hora de chegada com antecedência). O check-out é até às 11:00. Horários flexíveis podem ser combinados mediante pedido."
+      }
+    ]
+  },
+  "location": {
+    "title": "Localização",
+    "description": "Situado no pitoresco campo português de Castelo de Paiva, a nossa propriedade oferece o equilíbrio perfeito entre reclusão e acessibilidade. A apenas 1 hora do Porto e perto do Rio Douro.",
+    "mapPlaceholder": "Mapa interativo em breve",
+    "address": "Casal da Renda, Paraíso, Castelo de Paiva, Portugal"
+  },
+  "calendar": {
+    "title": "Disponibilidade",
+    "description": "Verifique as datas disponíveis e reserve a sua estadia",
+    "cta": "Ver Disponibilidade no Airbnb",
+    "placeholder": "Integração do calendário em breve"
+  },
+  "footer": {
+    "contact": "Contacte-nos",
+    "followUs": "Siga-nos",
+    "copyright": "© 2026 Tapadinho Natureza e Piscina. Todos os direitos reservados.",
+    "madeWith": "Feito com ❤️ em Portugal",
+    "license": "Licença: 54824/AL"
+  }
+}

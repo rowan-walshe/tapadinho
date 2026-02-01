@@ -1,0 +1,105 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "location": "Location",
+    "book": "Book Now"
+  },
+  "hero": {
+    "title": "Tapadinho",
+    "subtitle": "Nature and Pool · Countryside Villa in Portugal",
+    "cta": "Check Availability"
+  },
+  "about": {
+    "title": "About the Property",
+    "description": "Casa do Tapadinho is an authentic rustic villa close to the south bank of the Douro River, isolated from the outside world in a peaceful and welcoming countryside area — just 1 hour from Porto airport. The green colour is empress here. It combines the charm and glamour of a traditional family house with the comfort of all modern facilities, providing you with a unique and pleasant stay among the vineyards and terraces or by our beautiful swimming pool.",
+    "areaTitle": "The Area",
+    "areaDescription": "Located in Castelo de Paiva, you'll find yourself surrounded by native forest, rolling hills, and traditional villages. The region offers excellent local cuisine, historic sites, and countless opportunities for outdoor activities. The Douro River is nearby for boat trips, and Porto's coastline is just 40 minutes away with beautiful wooden boardwalks perfect for walking or cycling."
+  },
+  "amenities": {
+    "pool": "Private Pool",
+    "garden": "Garden",
+    "kitchen": "Full Kitchen",
+    "wifi": "Free Wi-Fi",
+    "bedrooms": "2 Bedrooms",
+    "parking": "Free Parking",
+    "pets": "Pet Friendly",
+    "views": "Countryside Views"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "categories": {
+      "all": "All",
+      "bedrooms": "Bedrooms",
+      "kitchen": "Kitchen",
+      "living": "Living Room",
+      "outdoor": "Outdoor",
+      "nature": "Nature"
+    }
+  },
+  "reviews": {
+    "title": "What Our Guests Say",
+    "rating": "9.6/10 Exceptional",
+    "review1": {
+      "text": "We went on a family holiday and took our two little dogs and we loved it! The area around the house (native forest) is magnificent, the space is super comfortable and cosy! We had everything we needed. We even had the chance to sip our hot coffee at one of the little tables by the lake. We'll definitely be back!",
+      "author": "Ana",
+      "date": "September 2024"
+    },
+    "review2": {
+      "text": "We liked the whole house, but our favourite part was the pool, where we had an amazing time as a family with our pets. The pool isn't very deep, it's the perfect height.",
+      "author": "Bebiana",
+      "date": "July 2024"
+    },
+    "review3": {
+      "text": "Maybe not for everyone but we experienced the house and surroundings as a little paradise. The house has character and the whole lot around it is beautiful. It is quiet and has lots of space. The pool is a real pool, and not an enlarged sort of bath tub. A beautiful view is included.",
+      "author": "Fennis",
+      "date": "June 2025"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How do I get to the property?",
+        "answer": "The property is easily accessible by car, located in Casal da Renda, Paraíso, Castelo de Paiva. We'll provide detailed directions after booking. Porto Airport (Francisco Sá Carneiro) is approximately 1 hour away (60 km)."
+      },
+      {
+        "question": "Is the pool available year-round?",
+        "answer": "The pool is available from May through October. During the cooler months, guests can still enjoy the outdoor areas, garden, fireplace, and beautiful surroundings."
+      },
+      {
+        "question": "Are pets allowed?",
+        "answer": "Yes! We welcome well-behaved pets. Please let us know in advance if you're bringing a furry friend. Additional charges may apply."
+      },
+      {
+        "question": "What's included in the rental?",
+        "answer": "The rental includes bed linens, towels, fully equipped kitchen with dishwasher, microwave, and coffee machine, Wi-Fi, heating, fireplace, washing machine, iron, and access to all outdoor areas including the pool, patio, and BBQ facilities."
+      },
+      {
+        "question": "What are the check-in and check-out times?",
+        "answer": "Check-in is from 3:00 PM to 10:00 PM (please inform us of your arrival time in advance). Check-out is by 11:00 AM. Flexible times may be arranged upon request."
+      }
+    ]
+  },
+  "location": {
+    "title": "Location",
+    "description": "Situated in the scenic Portuguese countryside of Castelo de Paiva, our property offers the perfect balance of seclusion and accessibility. Just 1 hour from Porto and close to the Douro River.",
+    "mapPlaceholder": "Interactive map coming soon",
+    "address": "Casal da Renda, Paraíso, Castelo de Paiva, Portugal"
+  },
+  "calendar": {
+    "title": "Availability",
+    "description": "Check available dates and book your stay",
+    "cta": "Check Availability on Airbnb",
+    "placeholder": "Calendar integration coming soon"
+  },
+  "footer": {
+    "contact": "Contact Us",
+    "followUs": "Follow Us",
+    "copyright": "© 2026 Tapadinho Nature and Pool. All rights reserved.",
+    "madeWith": "Made with ❤️ in Portugal",
+    "license": "License: 54824/AL"
+  }
+}

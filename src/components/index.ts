@@ -1,0 +1,9 @@
+export { Header } from "./Header";
+export { Hero } from "./Hero";
+export { About } from "./About";
+export { Gallery } from "./Gallery";
+export { Reviews } from "./Reviews";
+export { FAQ } from "./FAQ";
+export { Location } from "./Location";
+export { Calendar } from "./Calendar";
+export { Footer } from "./Footer";
