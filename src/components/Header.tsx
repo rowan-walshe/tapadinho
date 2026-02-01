@@ -1,9 +1,18 @@
 import { useTranslation } from "react-i18next";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Header() {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "pt" : "en";
@@ -20,11 +29,20 @@ export function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <a href="#" className="text-xl font-semibold text-stone-800">
+          <a
+            href="#"
+            className={`text-xl font-semibold transition-colors ${
+              isScrolled ? "text-stone-800" : "text-white"
+            }`}
+          >
             Tapadinho
           </a>
 
@@ -34,7 +52,11 @@ export function Header() {
               <a
                 key={item.key}
                 href={item.href}
-                className="text-stone-600 hover:text-stone-900 transition-colors"
+                className={`transition-colors ${
+                  isScrolled
+                    ? "text-stone-600 hover:text-stone-900"
+                    : "text-white/90 hover:text-white"
+                }`}
               >
                 {t(`header.${item.key}`)}
               </a>
@@ -43,7 +65,11 @@ export function Header() {
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className="px-3 py-1 text-sm border border-stone-300 rounded-full hover:bg-stone-100 transition-colors"
+              className={`px-3 py-1 text-sm rounded-full transition-colors ${
+                isScrolled
+                  ? "border border-stone-300 hover:bg-stone-100"
+                  : "border border-white/50 text-white hover:bg-white/20"
+              }`}
             >
               {i18n.language === "en" ? "PT" : "EN"}
             </button>
@@ -59,7 +85,9 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className={`md:hidden p-2 transition-colors ${
+              isScrolled ? "text-stone-800" : "text-white"
+            }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >

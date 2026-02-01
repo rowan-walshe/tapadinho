@@ -3,11 +3,7 @@ import { useTranslation } from "react-i18next";
 export function Reviews() {
   const { t } = useTranslation();
 
-  const reviews = [
-    { key: "review1" },
-    { key: "review2" },
-    { key: "review3" },
-  ];
+  const reviews = [{ key: "review1" }, { key: "review2" }, { key: "review3" }];
 
   return (
     <section id="reviews" className="py-20 bg-amber-50">

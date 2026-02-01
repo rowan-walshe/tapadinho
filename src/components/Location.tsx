@@ -35,7 +35,9 @@ export function Location() {
                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
               />
             </svg>
-            <p className="text-stone-500 text-lg">{t("location.mapPlaceholder")}</p>
+            <p className="text-stone-500 text-lg">
+              {t("location.mapPlaceholder")}
+            </p>
           </div>
         </div>
       </div>

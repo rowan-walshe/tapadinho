@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
-// TODO: Replace with actual Airbnb listing URL
-const AIRBNB_URL = "https://www.airbnb.com";
+// Airbnb listing URL
+const AIRBNB_URL = "https://www.airbnb.co.uk/rooms/21234892";
 
 export function Calendar() {
   const { t } = useTranslation();
@@ -12,7 +12,9 @@ export function Calendar() {
         <h2 className="text-3xl md:text-4xl font-light text-stone-800 mb-6">
           {t("calendar.title")}
         </h2>
-        <p className="text-lg text-stone-600 mb-8">{t("calendar.description")}</p>
+        <p className="text-lg text-stone-600 mb-8">
+          {t("calendar.description")}
+        </p>
 
         {/* Placeholder Calendar */}
         <div className="bg-stone-100 rounded-2xl p-12 mb-8">
@@ -31,8 +33,8 @@ export function Calendar() {
                   i < 3 || i > 30
                     ? "text-stone-300"
                     : i % 7 === 0 || i === 14 || i === 21
-                    ? "bg-stone-300 text-stone-500"
-                    : "bg-white text-stone-700 hover:bg-amber-100 cursor-pointer"
+                      ? "bg-stone-300 text-stone-500"
+                      : "bg-white text-stone-700 hover:bg-amber-100 cursor-pointer"
                 }`}
               >
                 {((i - 2 + 31) % 31) + 1}

@@ -14,27 +14,39 @@
   },
   "about": {
     "title": "About the Property",
-    "description": "Casa do Tapadinho is an authentic rustic villa close to the south bank of the Douro River, isolated from the outside world in a peaceful and welcoming countryside area — just 1 hour from Porto airport. The green colour is empress here. It combines the charm and glamour of a traditional family house with the comfort of all modern facilities, providing you with a unique and pleasant stay among the vineyards and terraces or by our beautiful swimming pool.",
+    "description": "Casa do Tapadinho is an authentic rustic villa - close to the south bank of Douro River - isolated from the outside world, located in a peaceful and welcoming countryside area - just 1 hour driving from Porto airport - where the green color is the empress. It combines the charm and glamour of a traditional family house with the comfort of all the modern facilities that provides you with an unique and pleasant stay among the vineyards and terraces or by a great swimming pool.",
     "areaTitle": "The Area",
-    "areaDescription": "Located in Castelo de Paiva, you'll find yourself surrounded by native forest, rolling hills, and traditional villages. The region offers excellent local cuisine, historic sites, and countless opportunities for outdoor activities. The Douro River is nearby for boat trips, and Porto's coastline is just 40 minutes away with beautiful wooden boardwalks perfect for walking or cycling."
+    "areaDescription": "Located in Castelo de Paiva, you'll find yourself surrounded by native forest, rolling hills, and traditional Portuguese villages. The region offers excellent local cuisine at nearby restaurants like O Compadre (6 km away), historic sites including Castelo de Santa Maria da Feira (34 km), and the beautiful Douro River (44 km) for boat trips. Porto's airport is just 60 km away, making it easily accessible for international guests.",
+    "amenitiesTitle": "What This Place Offers"
   },
   "amenities": {
     "pool": "Private Pool",
-    "garden": "Garden",
+    "garden": "Spacious ~2.5 Acre Garden",
     "kitchen": "Full Kitchen",
-    "wifi": "Free Wi-Fi",
-    "bedrooms": "2 Bedrooms",
-    "parking": "Free Parking",
+    "wifi": "High Speed Wi-Fi",
+    "bedrooms": "2 Double Bedrooms",
+    "parking": "Off-Street Parking",
     "pets": "Pet Friendly",
-    "views": "Countryside Views"
+    "views": "Countryside Views",
+    "fireplace": "Indoor Fireplace",
+    "tv": "Smart TV",
+    "bathroom": "Private Bathroom",
+    "bbq": "BBQ Grill",
+    "crib": "Crib Available",
+    "patio": "Outdoor Patio",
+    "sections": {
+      "outdoor": "Outdoor",
+      "indoor": "Indoor",
+      "essentials": "Essentials",
+      "convenience": "Convenience"
+    }
   },
   "gallery": {
     "title": "Gallery",
     "categories": {
       "all": "All",
       "bedrooms": "Bedrooms",
-      "kitchen": "Kitchen",
-      "living": "Living Room",
+      "living": "Kitchen & Living",
       "outdoor": "Outdoor",
       "nature": "Nature"
     }
@@ -62,24 +74,36 @@
     "title": "Frequently Asked Questions",
     "items": [
       {
-        "question": "How do I get to the property?",
-        "answer": "The property is easily accessible by car, located in Casal da Renda, Paraíso, Castelo de Paiva. We'll provide detailed directions after booking. Porto Airport (Francisco Sá Carneiro) is approximately 1 hour away (60 km)."
-      },
-      {
-        "question": "Is the pool available year-round?",
-        "answer": "The pool is available from May through October. During the cooler months, guests can still enjoy the outdoor areas, garden, fireplace, and beautiful surroundings."
-      },
-      {
-        "question": "Are pets allowed?",
-        "answer": "Yes! We welcome well-behaved pets. Please let us know in advance if you're bringing a furry friend. Additional charges may apply."
-      },
-      {
-        "question": "What's included in the rental?",
-        "answer": "The rental includes bed linens, towels, fully equipped kitchen with dishwasher, microwave, and coffee machine, Wi-Fi, heating, fireplace, washing machine, iron, and access to all outdoor areas including the pool, patio, and BBQ facilities."
+        "question": "How many people can stay at the property?",
+        "answer": "The property can accommodate up to 5 guests. We have 2 bedrooms (each with a double bed) and 1 sofa bed in the living room. The house is 150 m² with plenty of space for families or small groups."
       },
       {
         "question": "What are the check-in and check-out times?",
-        "answer": "Check-in is from 3:00 PM to 10:00 PM (please inform us of your arrival time in advance). Check-out is by 11:00 AM. Flexible times may be arranged upon request."
+        "answer": "Check-in is from 3:00 PM to 10:00 PM - please inform us of your arrival time in advance. Check-out is by 11:00 AM. Upon arrival, you'll be welcomed, checked in, and provided with tips on local activities and dining recommendations."
+      },
+      {
+        "question": "Are pets allowed?",
+        "answer": "Yes! We welcome well-behaved pets. Please let us know in advance if you're bringing a furry friend. Additional charges may apply. Our guests love bringing their dogs to enjoy the native forest and outdoor areas."
+      },
+      {
+        "question": "What amenities are included?",
+        "answer": "The property includes: private swimming pool, fully equipped kitchen (dishwasher, microwave, oven, stove, coffee machine), private bathroom with bathtub and shower, washing machine, iron, fireplace, TV, free WiFi, heating, bed linen and towels, BBQ facilities, garden, and free private parking. The kitchen has all utensils and a refrigerator."
+      },
+      {
+        "question": "How do I get to the property?",
+        "answer": "The property is located in Casal da Renda, Paraíso, Castelo de Paiva. Porto Airport (Francisco Sá Carneiro) is approximately 60 km away (1 hour drive). The property is easily accessible by car with free private parking on site. We'll provide detailed directions after booking."
+      },
+      {
+        "question": "Is the property suitable for children?",
+        "answer": "Yes! All children are welcome. We can provide a free cot/crib for children aged 0-6 years (subject to availability). There is no age restriction for check-in. The pool isn't very deep - it's the perfect height for families."
+      },
+      {
+        "question": "What's nearby?",
+        "answer": "Castelo de Paiva center is 4.1 km away. Nearby restaurants and cafés include O Compadre Restaurant (6 km), Café Central (6 km), and Confeitaria Tropicália (6 km). Tourist attractions include Castelo de Santa Maria da Feira (34 km), Europarque (37 km), and Rio Douro (44 km)."
+      },
+      {
+        "question": "What languages does the host speak?",
+        "answer": "Our host Mafalda speaks English, Spanish, French, and Portuguese. She's available throughout your stay to provide support and recommendations."
       }
     ]
   },

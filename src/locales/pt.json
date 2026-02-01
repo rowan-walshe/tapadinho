@@ -14,27 +14,39 @@
   },
   "about": {
     "title": "Sobre a Propriedade",
-    "description": "A Casa do Tapadinho é uma autêntica vivenda rústica perto da margem sul do Rio Douro, isolada do mundo exterior numa zona rural pacífica e acolhedora — a apenas 1 hora do aeroporto do Porto. A cor verde é imperatriz aqui. Combina o charme e glamour de uma casa de família tradicional com o conforto de todas as comodidades modernas, proporcionando-lhe uma estadia única e agradável entre vinhas e socalcos ou junto à nossa bela piscina.",
+    "description": "A Casa do Tapadinho é uma autêntica vivenda rústica - perto da margem sul do Rio Douro - isolada do mundo exterior, localizada numa zona rural pacífica e acolhedora - a apenas 1 hora de carro do aeroporto do Porto - onde a cor verde é imperatriz. Combina o charme e glamour de uma casa de família tradicional com o conforto de todas as comodidades modernas que lhe proporcionam uma estadia única e agradável entre as vinhas e socalcos ou junto a uma ótima piscina.",
     "areaTitle": "A Região",
-    "areaDescription": "Localizado em Castelo de Paiva, encontrar-se-á rodeado por floresta nativa, colinas e aldeias tradicionais. A região oferece excelente gastronomia local, locais históricos e inúmeras oportunidades para atividades ao ar livre. O Rio Douro está próximo para passeios de barco, e a costa do Porto fica a apenas 40 minutos com belos passadiços de madeira perfeitos para caminhar ou andar de bicicleta."
+    "areaDescription": "Localizado em Castelo de Paiva, encontrar-se-á rodeado por floresta nativa, colinas e aldeias tradicionais portuguesas. A região oferece excelente gastronomia local em restaurantes próximos como O Compadre (6 km), locais históricos incluindo o Castelo de Santa Maria da Feira (34 km), e o belo Rio Douro (44 km) para passeios de barco. O aeroporto do Porto fica a apenas 60 km, tornando-o facilmente acessível para hóspedes internacionais.",
+    "amenitiesTitle": "O Que Este Espaço Oferece"
   },
   "amenities": {
     "pool": "Piscina Privada",
-    "garden": "Jardim",
+    "garden": "Jardim de ~1 Hectare",
     "kitchen": "Cozinha Equipada",
-    "wifi": "Wi-Fi Grátis",
-    "bedrooms": "2 Quartos",
-    "parking": "Estacionamento Grátis",
+    "wifi": "Wi-Fi de Alta Velocidade",
+    "bedrooms": "2 Quartos de Casal",
+    "parking": "Estacionamento Privado",
     "pets": "Aceita Animais",
-    "views": "Vista Campo"
+    "views": "Vista Campo",
+    "fireplace": "Lareira Interior",
+    "tv": "Smart TV",
+    "bathroom": "Casa de Banho Privada",
+    "bbq": "Churrasqueira",
+    "crib": "Berço Disponível",
+    "patio": "Pátio Exterior",
+    "sections": {
+      "outdoor": "Exterior",
+      "indoor": "Interior",
+      "essentials": "Essenciais",
+      "convenience": "Conveniência"
+    }
   },
   "gallery": {
     "title": "Galeria",
     "categories": {
       "all": "Tudo",
       "bedrooms": "Quartos",
-      "kitchen": "Cozinha",
-      "living": "Sala de Estar",
+      "living": "Cozinha e Sala",
       "outdoor": "Exterior",
       "nature": "Natureza"
     }
@@ -62,24 +74,36 @@
     "title": "Perguntas Frequentes",
     "items": [
       {
-        "question": "Como chego à propriedade?",
-        "answer": "A propriedade é facilmente acessível de carro, localizada em Casal da Renda, Paraíso, Castelo de Paiva. Forneceremos indicações detalhadas após a reserva. O Aeroporto do Porto (Francisco Sá Carneiro) fica a aproximadamente 1 hora (60 km)."
-      },
-      {
-        "question": "A piscina está disponível todo o ano?",
-        "answer": "A piscina está disponível de maio a outubro. Durante os meses mais frios, os hóspedes podem ainda desfrutar das áreas exteriores, jardim, lareira e da bela envolvente."
-      },
-      {
-        "question": "São permitidos animais de estimação?",
-        "answer": "Sim! Aceitamos animais de estimação bem-comportados. Por favor, informe-nos antecipadamente se traz um amigo peludo. Podem aplicar-se encargos adicionais."
-      },
-      {
-        "question": "O que está incluído no aluguer?",
-        "answer": "O aluguer inclui roupa de cama, toalhas, cozinha totalmente equipada com máquina de lavar loiça, micro-ondas e máquina de café, Wi-Fi, aquecimento, lareira, máquina de lavar roupa, ferro de engomar e acesso a todas as áreas exteriores, incluindo piscina, pátio e churrasqueira."
+        "question": "Quantas pessoas podem ficar na propriedade?",
+        "answer": "A propriedade pode acomodar até 5 hóspedes. Temos 2 quartos (cada um com cama de casal) e 1 sofá-cama na sala de estar. A casa tem 150 m² com muito espaço para famílias ou pequenos grupos."
       },
       {
         "question": "Quais são os horários de check-in e check-out?",
-        "answer": "O check-in é das 15:00 às 22:00 (por favor informe-nos da hora de chegada com antecedência). O check-out é até às 11:00. Horários flexíveis podem ser combinados mediante pedido."
+        "answer": "O check-in é das 15:00 às 22:00 - por favor informe-nos da hora de chegada com antecedência. O check-out é até às 11:00. À chegada, será recebido, fará o check-in e receberá dicas sobre atividades locais e recomendações de restaurantes."
+      },
+      {
+        "question": "São permitidos animais de estimação?",
+        "answer": "Sim! Aceitamos animais de estimação bem-comportados. Por favor, informe-nos antecipadamente se traz um amigo peludo. Podem aplicar-se encargos adicionais. Os nossos hóspedes adoram trazer os seus cães para desfrutar da floresta nativa e áreas exteriores."
+      },
+      {
+        "question": "Que comodidades estão incluídas?",
+        "answer": "A propriedade inclui: piscina privada, cozinha totalmente equipada (máquina de lavar loiça, micro-ondas, forno, fogão, máquina de café), casa de banho privada com banheira e chuveiro, máquina de lavar roupa, ferro de engomar, lareira, TV, Wi-Fi grátis, aquecimento, roupa de cama e toalhas, churrasqueira, jardim e estacionamento privado grátis. A cozinha tem todos os utensílios e frigorífico."
+      },
+      {
+        "question": "Como chego à propriedade?",
+        "answer": "A propriedade está localizada em Casal da Renda, Paraíso, Castelo de Paiva. O Aeroporto do Porto (Francisco Sá Carneiro) fica a aproximadamente 60 km (1 hora de carro). A propriedade é facilmente acessível de carro com estacionamento privado grátis no local. Forneceremos indicações detalhadas após a reserva."
+      },
+      {
+        "question": "A propriedade é adequada para crianças?",
+        "answer": "Sim! Todas as crianças são bem-vindas. Podemos fornecer um berço grátis para crianças de 0-6 anos (sujeito a disponibilidade). Não há restrição de idade para check-in. A piscina não é muito funda - é a altura perfeita para famílias."
+      },
+      {
+        "question": "O que há nas proximidades?",
+        "answer": "O centro de Castelo de Paiva fica a 4,1 km. Restaurantes e cafés próximos incluem Restaurante O Compadre (6 km), Café Central (6 km) e Confeitaria Tropicália (6 km). Atrações turísticas incluem o Castelo de Santa Maria da Feira (34 km), Europarque (37 km) e Rio Douro (44 km)."
+      },
+      {
+        "question": "Que línguas fala a anfitriã?",
+        "answer": "A nossa anfitriã Mafalda fala Inglês, Espanhol, Francês e Português. Ela está disponível durante a sua estadia para fornecer apoio e recomendações."
       }
     ]
   },
