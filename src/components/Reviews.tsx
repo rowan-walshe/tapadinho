@@ -38,6 +38,7 @@ export function Reviews() {
   >({});
   const [currentIndex, setCurrentIndex] = useState(0);
   const isScrollingRef = useRef(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
 
   const reviews = reviewsData as Review[];
   const totalReviews = reviews.length;
@@ -129,6 +130,26 @@ export function Reviews() {
     container.scrollLeft = resetPosition;
 
     isScrollingRef.current = false;
+  };
+
+  // Touch handlers for swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStart === null || isScrollingRef.current) return;
+    const touchEnd = e.changedTouches[0].clientX;
+    const diff = touchStart - touchEnd;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        scrollTo("right");
+      } else {
+        scrollTo("left");
+      }
+    }
+    setTouchStart(null);
   };
 
   const formatDate = (dateString: string) => {
@@ -291,6 +312,8 @@ export function Reviews() {
           <div
             ref={scrollContainerRef}
             className="flex gap-8 overflow-x-hidden items-start py-4"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
           >
             {/* Triple the reviews for seamless infinite scroll */}
             {[...Array(3)].map((_, setIndex) =>
