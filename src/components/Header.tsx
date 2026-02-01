@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useState, useEffect, useRef, useCallback } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLanguage } from "@fortawesome/free-solid-svg-icons";
 
 export function Header() {
   const { t, i18n } = useTranslation();
@@ -141,12 +143,13 @@ export function Header() {
             {/* Language Toggle */}
             <button
               onClick={toggleLanguage}
-              className={`px-3 py-1 text-sm rounded-full transition-colors ${
+              className={`px-3 py-1 text-sm rounded-full transition-colors flex items-center gap-1.5 ${
                 isScrolled
                   ? "border border-stone-300 hover:bg-stone-100"
                   : "border border-white/50 text-white hover:bg-white/20"
               }`}
             >
+              <FontAwesomeIcon icon={faLanguage} className="w-4 h-4" />
               {i18n.language === "en" ? "PT" : "EN"}
             </button>
 
@@ -217,8 +220,9 @@ export function Header() {
               <div className="flex items-center space-x-4 pt-4 border-t border-stone-200">
                 <button
                   onClick={toggleLanguage}
-                  className="px-3 py-1 text-sm border border-stone-300 rounded-full hover:bg-stone-100 transition-colors"
+                  className="px-3 py-1 text-sm border border-stone-300 rounded-full hover:bg-stone-100 transition-colors flex items-center gap-1.5"
                 >
+                  <FontAwesomeIcon icon={faLanguage} className="w-4 h-4" />
                   {i18n.language === "en" ? "PT" : "EN"}
                 </button>
                 <a
