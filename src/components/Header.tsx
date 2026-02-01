@@ -101,7 +101,9 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-white/90 backdrop-blur-sm shadow-sm" : "bg-transparent"
+        isScrolled || isMenuOpen
+          ? "bg-white/90 backdrop-blur-sm shadow-sm"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -114,7 +116,7 @@ export function Header() {
               scrollToSection("#");
             }}
             className={`text-xl font-semibold transition-colors ${
-              isScrolled ? "text-stone-800" : "text-white"
+              isScrolled || isMenuOpen ? "text-stone-800" : "text-white"
             }`}
           >
             Tapadinho
@@ -169,7 +171,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             className={`md:hidden p-2 transition-colors ${
-              isScrolled ? "text-stone-800" : "text-white"
+              isScrolled || isMenuOpen ? "text-stone-800" : "text-white"
             }`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
