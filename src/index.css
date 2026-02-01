@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+/* Dynamic viewport height for iOS Safari compatibility */
+.h-screen-safe {
+  height: 100vh; /* Fallback for older browsers */
+  height: 100dvh; /* Dynamic viewport height - adjusts for iOS browser chrome */
+}
+
+/* Ensure bottom elements stay visible above iOS browser chrome */
+.bottom-safe {
+  bottom: 2rem;
+  bottom: max(2rem, env(safe-area-inset-bottom));
+}

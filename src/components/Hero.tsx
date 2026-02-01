@@ -104,7 +104,7 @@ export function Hero() {
   );
 
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen-safe w-full overflow-hidden">
       {/* Video Background */}
       <div className="absolute inset-0">
         <video
@@ -144,7 +144,7 @@ export function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce">
+      <div className="absolute bottom-safe left-1/2 -translate-x-1/2 z-10 animate-bounce">
         <svg
           className="w-8 h-8 text-white"
           fill="none"
@@ -163,7 +163,7 @@ export function Hero() {
       {/* Video Play/Pause Button */}
       <button
         onClick={togglePlayPause}
-        className="absolute bottom-8 right-4 z-20 p-3 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors"
+        className="absolute bottom-safe right-4 z-20 p-3 bg-black/50 hover:bg-black/70 rounded-full text-white transition-colors"
         aria-label={isPlaying ? "Pause video" : "Play video"}
       >
         {isPlaying ? (
