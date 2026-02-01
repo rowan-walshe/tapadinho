@@ -113,13 +113,15 @@ export function Hero() {
           muted
           loop
           playsInline
+          controls={false}
+          disablePictureInPicture
           poster="/video/hero-poster.jpg"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover pointer-events-none"
         >
           <source src="/video/hero.webm" type="video/webm" />
           <source src="/video/hero.mp4" type="video/mp4" />
         </video>
-        {/* Overlay */}
+        {/* Overlay - also blocks native video controls */}
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
