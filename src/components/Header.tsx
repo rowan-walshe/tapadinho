@@ -1,10 +1,61 @@
 import { useTranslation } from "react-i18next";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
 export function Header() {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const isAutoScrollingRef = useRef(false);
+  const scrollAnimationRef = useRef<number | null>(null);
+
+  const cancelAutoScroll = useCallback(() => {
+    if (scrollAnimationRef.current !== null) {
+      cancelAnimationFrame(scrollAnimationRef.current);
+      scrollAnimationRef.current = null;
+    }
+    isAutoScrollingRef.current = false;
+  }, []);
+
+  const scrollToSection = useCallback(
+    (targetId: string) => {
+      const target =
+        targetId === "#" ? document.body : document.querySelector(targetId);
+      if (!target) return;
+
+      const targetPosition =
+        targetId === "#" ? 0 : (target as HTMLElement).offsetTop - 64;
+      const startPosition = window.scrollY;
+      const distance = targetPosition - startPosition;
+      const duration = 600;
+      let startTime: number | null = null;
+
+      cancelAutoScroll();
+      isAutoScrollingRef.current = true;
+
+      const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+      const animateScroll = (currentTime: number) => {
+        if (!isAutoScrollingRef.current) return;
+
+        if (startTime === null) startTime = currentTime;
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeProgress = easeOutCubic(progress);
+
+        window.scrollTo(0, startPosition + distance * easeProgress);
+
+        if (progress < 1) {
+          scrollAnimationRef.current = requestAnimationFrame(animateScroll);
+        } else {
+          isAutoScrollingRef.current = false;
+          scrollAnimationRef.current = null;
+        }
+      };
+
+      scrollAnimationRef.current = requestAnimationFrame(animateScroll);
+    },
+    [cancelAutoScroll],
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +64,23 @@ export function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleUserScroll = () => {
+      if (isAutoScrollingRef.current) {
+        cancelAutoScroll();
+      }
+    };
+
+    window.addEventListener("wheel", handleUserScroll, { passive: true });
+    window.addEventListener("touchmove", handleUserScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("wheel", handleUserScroll);
+      window.removeEventListener("touchmove", handleUserScroll);
+      cancelAutoScroll();
+    };
+  }, [cancelAutoScroll]);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "pt" : "en";
@@ -39,6 +107,10 @@ export function Header() {
           {/* Logo */}
           <a
             href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              scrollToSection("#");
+            }}
             className={`text-xl font-semibold transition-colors ${
               isScrolled ? "text-stone-800" : "text-white"
             }`}
@@ -52,7 +124,11 @@ export function Header() {
               <a
                 key={item.key}
                 href={item.href}
-                className={`transition-colors ${
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToSection(item.href);
+                }}
+                className={`cursor-pointer transition-colors ${
                   isScrolled
                     ? "text-stone-600 hover:text-stone-900"
                     : "text-white/90 hover:text-white"
@@ -77,6 +153,10 @@ export function Header() {
             {/* Book CTA */}
             <a
               href="#calendar"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("#calendar");
+              }}
               className="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
             >
               {t("header.book")}
@@ -124,8 +204,12 @@ export function Header() {
                 <a
                   key={item.key}
                   href={item.href}
-                  className="text-stone-600 hover:text-stone-900 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+                  className="text-stone-600 hover:text-stone-900 transition-colors cursor-pointer"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+                    scrollToSection(item.href);
+                  }}
                 >
                   {t(`header.${item.key}`)}
                 </a>
@@ -140,7 +224,11 @@ export function Header() {
                 <a
                   href="#calendar"
                   className="px-4 py-2 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    setIsMenuOpen(false);
+                    scrollToSection("#calendar");
+                  }}
                 >
                   {t("header.book")}
                 </a>
