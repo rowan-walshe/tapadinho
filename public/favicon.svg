@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="tree" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" style="stop-color:#22c55e"/>
+      <stop offset="100%" style="stop-color:#166534"/>
+    </linearGradient>
+  </defs>
+  <!-- Tree trunk (behind leaves) -->
+  <rect x="14" y="23" width="4" height="6" fill="#92400e"/>
+  <!-- Bottom layer -->
+  <polygon points="16,6 4,24 28,24" fill="url(#tree)"/>
+  <!-- Middle layer -->
+  <polygon points="16,4 6,18 26,18" fill="url(#tree)"/>
+  <!-- Top layer -->
+  <polygon points="16,2 8,12 24,12" fill="url(#tree)"/>
+</svg>
