@@ -1,12 +1,12 @@
 import { useTranslation } from "react-i18next";
 import { useRef, useCallback, useState, useEffect } from "react";
+import { useScrollToSection } from "../hooks/useScrollToSection";
 
 export function Hero() {
   const { t } = useTranslation();
-  const isAutoScrollingRef = useRef(false);
-  const scrollAnimationRef = useRef<number | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(true);
+  const scrollToSection = useScrollToSection();
 
   useEffect(() => {
     const video = videoRef.current;
@@ -43,66 +43,6 @@ export function Hero() {
     }
   }, []);
 
-  const cancelAutoScroll = useCallback(() => {
-    if (scrollAnimationRef.current !== null) {
-      cancelAnimationFrame(scrollAnimationRef.current);
-      scrollAnimationRef.current = null;
-    }
-    isAutoScrollingRef.current = false;
-  }, []);
-
-  const scrollToSection = useCallback(
-    (targetId: string) => {
-      const target = document.querySelector(targetId);
-      if (!target) return;
-
-      const targetPosition = (target as HTMLElement).offsetTop - 64;
-      const startPosition = window.scrollY;
-      const distance = targetPosition - startPosition;
-      const duration = 600;
-      let startTime: number | null = null;
-
-      cancelAutoScroll();
-      isAutoScrollingRef.current = true;
-
-      const handleUserScroll = () => {
-        if (isAutoScrollingRef.current) {
-          cancelAutoScroll();
-          window.removeEventListener("wheel", handleUserScroll);
-          window.removeEventListener("touchmove", handleUserScroll);
-        }
-      };
-
-      window.addEventListener("wheel", handleUserScroll, { passive: true });
-      window.addEventListener("touchmove", handleUserScroll, { passive: true });
-
-      const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
-
-      const animateScroll = (currentTime: number) => {
-        if (!isAutoScrollingRef.current) return;
-
-        if (startTime === null) startTime = currentTime;
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const easeProgress = easeOutCubic(progress);
-
-        window.scrollTo(0, startPosition + distance * easeProgress);
-
-        if (progress < 1) {
-          scrollAnimationRef.current = requestAnimationFrame(animateScroll);
-        } else {
-          isAutoScrollingRef.current = false;
-          scrollAnimationRef.current = null;
-          window.removeEventListener("wheel", handleUserScroll);
-          window.removeEventListener("touchmove", handleUserScroll);
-        }
-      };
-
-      scrollAnimationRef.current = requestAnimationFrame(animateScroll);
-    },
-    [cancelAutoScroll],
-  );
-
   return (
     <section className="relative h-screen-safe w-full overflow-hidden">
       {/* Video Background */}
@@ -134,10 +74,10 @@ export function Hero() {
           {t("hero.subtitle")}
         </p>
         <a
-          href="#calendar"
+          href="#book"
           onClick={(e) => {
             e.preventDefault();
-            scrollToSection("#calendar");
+            scrollToSection("#book");
           }}
           className="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-lg text-lg transition-colors"
         >

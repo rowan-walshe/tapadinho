@@ -1,0 +1,7 @@
+- Floorplan is important to help show the sense of scale of the property
+- The property generally books out fully in the summer months. Part of the goal to increase bookings in the off-season.
+  - In particular for the winter months, the pool will be closed, so it's important to highlight the size of the property
+- Reorder the picture to show the best ones first
+- One of the challenges to figure out out to show the "year in tapadinho"
+  - We'll want to show the pictures and videos for the property at different times of year. We'll need to figure out how to display this information in a cohesive manner (i.e. not randomly showing pictures from different seasons, but rather showing them in a way that makes sense to the viewer), while also not making it hard to see pictures from other seasons. For example, if someone is thinking of booking in spring, if we just show winter pictures, they may be less interested.
+- News section, to attract more repeat visitors (e.g. the pool upgrade to add steps)

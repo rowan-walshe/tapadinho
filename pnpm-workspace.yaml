@@ -1,0 +1,7 @@
+allowBuilds:
+  sharp: false
+
+# Ensure anything that resolves "vite" gets rolldown-vite (pnpm 10+ reads
+# overrides from here, not from the "pnpm" field in package.json)
+overrides:
+  vite: npm:rolldown-vite@7.2.5

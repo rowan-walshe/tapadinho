@@ -3,13 +3,14 @@ import {
   Hero,
   About,
   Gallery,
-  Reviews,
   FAQ,
   Location,
-  Calendar,
+  Booking,
   Footer,
 } from "./components";
 
+// Reviews and Calendar (availability) sections are temporarily hidden —
+// re-add them here once the review carousel is ready / iCal integration lands
 function App() {
   return (
     <div className="min-h-screen bg-white">
@@ -18,10 +19,9 @@ function App() {
         <Hero />
         <About />
         <Gallery />
-        <Reviews />
         <FAQ />
         <Location />
-        <Calendar />
+        <Booking />
       </main>
       <Footer />
     </div>

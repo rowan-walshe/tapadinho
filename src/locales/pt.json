@@ -16,7 +16,7 @@
     "title": "Sobre a Propriedade",
     "description": "A Casa do Tapadinho é uma autêntica vivenda rústica - perto da margem sul do Rio Douro - isolada do mundo exterior, localizada numa zona rural pacífica e acolhedora - a apenas 1 hora de carro do aeroporto do Porto - onde a cor verde é imperatriz. Combina o charme e glamour de uma casa de família tradicional com o conforto de todas as comodidades modernas que lhe proporcionam uma estadia única e agradável entre as vinhas e socalcos ou junto a uma ótima piscina.",
     "areaTitle": "A Região",
-    "areaDescription": "Localizado em Castelo de Paiva, encontrar-se-á rodeado por floresta nativa, colinas e aldeias tradicionais portuguesas. A região oferece excelente gastronomia local em restaurantes próximos como O Compadre (6 km), locais históricos incluindo o Castelo de Santa Maria da Feira (34 km), e o belo Rio Douro (44 km) para passeios de barco. O aeroporto do Porto fica a apenas 60 km, tornando-o facilmente acessível para hóspedes internacionais.",
+    "areaDescription": "Localizado em Castelo de Paiva, encontrar-se-á rodeado por floresta nativa, colinas e aldeias tradicionais portuguesas. Refresque-se no Douro na Praia Fluvial do Pedorido, uma praia fluvial arborizada a apenas 12 minutos de carro, ou percorra os famosos Passadiços do Paiva e atravesse a ponte suspensa 516 Arouca — uma das maiores pontes pedonais suspensas do mundo — no vizinho Geoparque de Arouca. A região oferece excelente gastronomia local em restaurantes próximos como O Compadre (6 km), e o Porto e o seu aeroporto ficam a apenas uma hora de carro, tornando-o facilmente acessível para hóspedes internacionais.",
     "amenitiesTitle": "O Que Este Espaço Oferece"
   },
   "amenities": {
@@ -45,7 +45,7 @@
     "title": "Galeria",
     "categories": {
       "all": "Tudo",
-      "bedrooms": "Quartos",
+      "bedrooms": "Quartos e Casa de Banho",
       "living": "Cozinha e Sala",
       "outdoor": "Exterior",
       "nature": "Natureza"
@@ -54,20 +54,18 @@
   "reviews": {
     "title": "O Que Dizem os Nossos Hóspedes",
     "rating": "9.6/10 Excecional",
-    "review1": {
-      "text": "Fomos de férias em família e levamos as nossas duas cadelinhas e adorámos! A zona envolvente da casa (floresta nativa) é magnífica, o espaço é super confortável e acolhedor! Tínhamos tudo o que precisávamos. Ainda tivemos oportunidade de tomar o nosso café quentinho numa das mesinhas junto ao lago. Vamos voltar de certeza!",
-      "author": "Ana",
-      "date": "Setembro 2024"
-    },
-    "review2": {
-      "text": "Gostamos de toda a casa, mas a zona que mais preferíamos foi a piscina, onde passamos momentos incríveis em família, com os nossos animais. A piscina não é muito funda, é a altura perfeita.",
-      "author": "Bebiana",
-      "date": "Julho 2024"
-    },
-    "review3": {
-      "text": "Talvez não seja para toda a gente, mas nós sentimos a casa e os arredores como um pequeno paraíso. A casa tem carácter e todo o terreno à sua volta é lindo. É sossegada e tem muito espaço. A piscina é uma verdadeira piscina, e não uma espécie de banheira alargada. A vista é linda.",
-      "author": "Fennis",
-      "date": "Junho 2025"
+    "showMore": "Mostrar mais",
+    "showLess": "Mostrar menos",
+    "translateTo": "Traduzir para {{language}}",
+    "translatedFrom": "Traduzido de {{language}} • Ver original",
+    "scoreLabel": "Classificação de {{score}} em 10",
+    "languages": {
+      "EN-GB": "Inglês",
+      "PT-PT": "Português",
+      "FR": "Francês",
+      "ES": "Espanhol",
+      "DE": "Alemão",
+      "NL": "Neerlandês"
     }
   },
   "faq": {
@@ -99,7 +97,7 @@
       },
       {
         "question": "O que há nas proximidades?",
-        "answer": "O centro de Castelo de Paiva fica a 4,1 km. Restaurantes e cafés próximos incluem Restaurante O Compadre (6 km), Café Central (6 km) e Confeitaria Tropicália (6 km). Atrações turísticas incluem o Castelo de Santa Maria da Feira (34 km), Europarque (37 km) e Rio Douro (44 km)."
+        "answer": "O centro de Castelo de Paiva fica a 4,1 km. Restaurantes e cafés próximos incluem o Restaurante O Compadre (6 km), o Café Central (6 km) e a Confeitaria Tropicália (6 km). Para um mergulho no Douro, a Praia Fluvial do Pedorido — com café junto ao rio e zonas de piquenique — fica a 12 minutos de carro. Os famosos Passadiços do Paiva e a ponte suspensa 516 Arouca, no Geoparque de Arouca, são um excelente passeio, e o Porto fica a cerca de uma hora de carro."
       },
       {
         "question": "Que línguas fala a anfitriã?",
@@ -109,15 +107,25 @@
   },
   "location": {
     "title": "Localização",
-    "description": "Situado no pitoresco campo português de Castelo de Paiva, a nossa propriedade oferece o equilíbrio perfeito entre reclusão e acessibilidade. A apenas 1 hora do Porto e perto do Rio Douro.",
-    "mapPlaceholder": "Mapa interativo em breve",
+    "description": "Implantada em cerca de um hectare de terreno privado — jardins, árvores de fruto, socalcos e floresta nativa — no pitoresco campo português de Castelo de Paiva, a propriedade oferece o equilíbrio perfeito entre reclusão e acessibilidade. A apenas 1 hora do Porto e perto do Rio Douro.",
+    "mapPlaceholder": "Mapa interativo da propriedade em breve",
     "address": "Casal da Renda, Paraíso, Castelo de Paiva, Portugal"
+  },
+  "booking": {
+    "title": "Reserve a Sua Estadia",
+    "description": "Verifique a disponibilidade e reserve diretamente na sua plataforma preferida",
+    "airbnb": "Reservar no Airbnb",
+    "bookingCom": "Reservar no Booking.com"
   },
   "calendar": {
     "title": "Disponibilidade",
     "description": "Verifique as datas disponíveis e reserve a sua estadia",
     "cta": "Ver Disponibilidade no Airbnb",
-    "placeholder": "Integração do calendário em breve"
+    "placeholder": "Integração do calendário em breve",
+    "available": "Disponível",
+    "booked": "Reservado",
+    "prevMonth": "Mês anterior",
+    "nextMonth": "Próximo mês"
   },
   "footer": {
     "contact": "Contacte-nos",

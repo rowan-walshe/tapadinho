@@ -1,6 +1,10 @@
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
-import { bookings, getBookedDatesForMonth } from "../data/bookings";
+import {
+  bookings,
+  formatLocalDate,
+  getBookedDatesForMonth,
+} from "../data/bookings";
 
 // Airbnb listing URL
 const AIRBNB_URL = "https://www.airbnb.co.uk/rooms/21234892";
@@ -56,6 +60,7 @@ function CalendarMonth({
   monthNames,
   today,
 }: CalendarMonthProps) {
+  const { t } = useTranslation();
   const firstDay = new Date(year, month, 1);
   const lastDay = new Date(year, month + 1, 0);
   const daysInMonth = lastDay.getDate();
@@ -74,7 +79,7 @@ function CalendarMonth({
     days.push(day);
   }
 
-  const todayStr = today.toISOString().split("T")[0];
+  const todayStr = formatLocalDate(today);
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-stone-200 p-4 sm:p-6">
@@ -121,7 +126,13 @@ function CalendarMonth({
                 }
                 ${isToday ? "ring-2 ring-amber-400 ring-offset-1" : ""}
               `}
-              title={isPast ? "" : isBooked ? "Booked" : "Available"}
+              title={
+                isPast
+                  ? ""
+                  : isBooked
+                    ? t("calendar.booked")
+                    : t("calendar.available")
+              }
             >
               {day}
             </div>
@@ -134,7 +145,7 @@ function CalendarMonth({
 
 export function Calendar() {
   const { t, i18n } = useTranslation();
-  const isPortuguese = i18n.language === "pt";
+  const isPortuguese = (i18n.resolvedLanguage ?? i18n.language) === "pt";
 
   const dayNames = isPortuguese ? DAY_NAMES_PT : DAY_NAMES_EN;
   const monthNames = isPortuguese ? MONTH_NAMES_PT : MONTH_NAMES_EN;
@@ -243,15 +254,11 @@ export function Calendar() {
           <div className="flex items-center justify-center gap-6 text-sm">
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 rounded bg-emerald-50 border border-emerald-200" />
-              <span className="text-stone-600">
-                {isPortuguese ? "Disponível" : "Available"}
-              </span>
+              <span className="text-stone-600">{t("calendar.available")}</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 rounded bg-stone-200" />
-              <span className="text-stone-600">
-                {isPortuguese ? "Reservado" : "Booked"}
-              </span>
+              <span className="text-stone-600">{t("calendar.booked")}</span>
             </div>
           </div>
         </div>
@@ -269,7 +276,7 @@ export function Calendar() {
                   : "text-stone-300 cursor-not-allowed"
               }
             `}
-            aria-label={isPortuguese ? "Mês anterior" : "Previous month"}
+            aria-label={t("calendar.prevMonth")}
           >
             <svg
               className="w-6 h-6"
@@ -297,7 +304,7 @@ export function Calendar() {
                   : "text-stone-300 cursor-not-allowed"
               }
             `}
-            aria-label={isPortuguese ? "Próximo mês" : "Next month"}
+            aria-label={t("calendar.nextMonth")}
           >
             <svg
               className="w-6 h-6"

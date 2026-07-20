@@ -6,6 +6,7 @@ import {
   faChevronRight,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
+import { srcSetFor } from "../utils/images";
 
 type Category = "all" | "bedrooms" | "living" | "outdoor" | "nature";
 
@@ -15,11 +16,14 @@ interface GalleryImage {
   category: Category;
 }
 
+// Ordered so the "all" view leads with the most striking shots:
+// outdoor, then kitchen & living, then nature, then bedrooms & bathroom
 const images: GalleryImage[] = [
-  { src: "/images/bedroom_1-1.webp", alt: "Bedroom 1", category: "bedrooms" },
-  { src: "/images/bedroom_1-2.webp", alt: "Bedroom 1", category: "bedrooms" },
-  { src: "/images/bedroom_2-1.webp", alt: "Bedroom 2", category: "bedrooms" },
-  { src: "/images/bathroom-1.webp", alt: "Bathroom", category: "bedrooms" },
+  { src: "/images/pool-1.webp", alt: "Pool", category: "outdoor" },
+  { src: "/images/pool-2.webp", alt: "Pool", category: "outdoor" },
+  { src: "/images/patio-1.webp", alt: "Patio", category: "outdoor" },
+  { src: "/images/patio-2.webp", alt: "Patio", category: "outdoor" },
+  { src: "/images/front-door.webp", alt: "Front Door", category: "outdoor" },
   {
     src: "/images/kitchen-1.webp",
     alt: "Kitchen & Living",
@@ -34,16 +38,15 @@ const images: GalleryImage[] = [
   { src: "/images/living_room-2.webp", alt: "Living Room", category: "living" },
   { src: "/images/interior-1.webp", alt: "Interior", category: "living" },
   { src: "/images/interior-2.webp", alt: "Interior", category: "living" },
-  { src: "/images/pool-1.webp", alt: "Pool", category: "outdoor" },
-  { src: "/images/pool-2.webp", alt: "Pool", category: "outdoor" },
-  { src: "/images/patio-1.webp", alt: "Patio", category: "outdoor" },
-  { src: "/images/patio-2.webp", alt: "Patio", category: "outdoor" },
-  { src: "/images/front-door.webp", alt: "Front Door", category: "outdoor" },
   { src: "/images/nature-1.webp", alt: "Nature", category: "nature" },
   { src: "/images/nature-2.webp", alt: "Nature", category: "nature" },
   { src: "/images/nature-3.webp", alt: "Nature", category: "nature" },
   { src: "/images/nature-4.webp", alt: "Nature", category: "nature" },
   { src: "/images/nature-5.webp", alt: "Nature", category: "nature" },
+  { src: "/images/bedroom_1-1.webp", alt: "Bedroom 1", category: "bedrooms" },
+  { src: "/images/bedroom_1-2.webp", alt: "Bedroom 1", category: "bedrooms" },
+  { src: "/images/bedroom_2-1.webp", alt: "Bedroom 2", category: "bedrooms" },
+  { src: "/images/bathroom-1.webp", alt: "Bathroom", category: "bedrooms" },
 ];
 
 export function Gallery() {
@@ -167,12 +170,14 @@ export function Gallery() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {filteredImages.map((image, index) => (
             <button
-              key={index}
+              key={image.src}
               onClick={() => setLightboxIndex(index)}
               className="aspect-square overflow-hidden rounded-lg cursor-pointer group"
             >
               <img
                 src={image.src}
+                srcSet={srcSetFor(image.src)}
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
                 alt={image.alt}
                 className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                 loading="lazy"
@@ -226,6 +231,8 @@ export function Gallery() {
           {/* Image */}
           <img
             src={filteredImages[lightboxIndex].src}
+            srcSet={srcSetFor(filteredImages[lightboxIndex].src)}
+            sizes="100vw"
             alt={filteredImages[lightboxIndex].alt}
             className="max-w-full max-h-full object-contain px-16"
             onClick={(e) => e.stopPropagation()}

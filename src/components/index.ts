@@ -6,4 +6,5 @@ export { Reviews } from "./Reviews";
 export { FAQ } from "./FAQ";
 export { Location } from "./Location";
 export { Calendar } from "./Calendar";
+export { Booking } from "./Booking";
 export { Footer } from "./Footer";

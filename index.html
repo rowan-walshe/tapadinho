@@ -5,7 +5,34 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tapadinho</title>
+    <!-- The hero poster is otherwise only discovered after the JS bundle
+         executes; preloading it gets the hero visual on screen sooner -->
+    <link
+      rel="preload"
+      as="image"
+      href="/video/hero-poster.jpg"
+      fetchpriority="high"
+    />
+    <title>Tapadinho · Nature and Pool — Countryside Villa in Portugal</title>
+    <meta
+      name="description"
+      content="Casa do Tapadinho — a rustic countryside villa with private pool in Castelo de Paiva, Portugal. 2 bedrooms, pet-friendly, surrounded by native forest, 1 hour from Porto."
+    />
+    <meta
+      property="og:title"
+      content="Tapadinho · Nature and Pool — Countryside Villa in Portugal"
+    />
+    <meta
+      property="og:description"
+      content="Rustic villa with private pool in Castelo de Paiva, Portugal. 2 bedrooms, pet-friendly, surrounded by native forest, 1 hour from Porto."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://demo.walshe.io/" />
+    <meta
+      property="og:image"
+      content="https://demo.walshe.io/video/hero-poster.jpg"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <div id="root"></div>

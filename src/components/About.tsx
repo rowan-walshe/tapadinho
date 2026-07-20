@@ -17,6 +17,7 @@ import {
   faUmbrella,
 } from "@fortawesome/free-solid-svg-icons";
 import type { IconDefinition } from "@fortawesome/fontawesome-svg-core";
+import { srcSetFor } from "../utils/images";
 
 interface Amenity {
   icon: IconDefinition;
@@ -86,6 +87,8 @@ export function About() {
           <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
             <img
               src="/images/front-door.webp"
+              srcSet={srcSetFor("/images/front-door.webp")}
+              sizes="(min-width: 768px) 50vw, 100vw"
               alt="Property front entrance"
               className="w-full h-full object-cover"
               loading="lazy"
@@ -99,6 +102,8 @@ export function About() {
           <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg md:order-1">
             <img
               src="/images/nature-1.webp"
+              srcSet={srcSetFor("/images/nature-1.webp")}
+              sizes="(min-width: 768px) 50vw, 100vw"
               alt="Surrounding countryside"
               className="w-full h-full object-cover"
               loading="lazy"

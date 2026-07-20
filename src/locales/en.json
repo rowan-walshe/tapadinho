@@ -16,7 +16,7 @@
     "title": "About the Property",
     "description": "Casa do Tapadinho is an authentic rustic villa - close to the south bank of Douro River - isolated from the outside world, located in a peaceful and welcoming countryside area - just 1 hour driving from Porto airport - where the green color is the empress. It combines the charm and glamour of a traditional family house with the comfort of all the modern facilities that provides you with an unique and pleasant stay among the vineyards and terraces or by a great swimming pool.",
     "areaTitle": "The Area",
-    "areaDescription": "Located in Castelo de Paiva, you'll find yourself surrounded by native forest, rolling hills, and traditional Portuguese villages. The region offers excellent local cuisine at nearby restaurants like O Compadre (6 km away), historic sites including Castelo de Santa Maria da Feira (34 km), and the beautiful Douro River (44 km) for boat trips. Porto's airport is just 60 km away, making it easily accessible for international guests.",
+    "areaDescription": "Located in Castelo de Paiva, you'll find yourself surrounded by native forest, rolling hills, and traditional Portuguese villages. Cool off in the Douro at the Praia Fluvial do Pedorido, a leafy river beach just 12 minutes away by car, or hike the famous Paiva Walkways and cross the 516 Arouca suspension bridge — one of the longest pedestrian suspension bridges in the world — in the neighbouring Arouca Geopark. The region offers excellent local cuisine at nearby restaurants like O Compadre (6 km away), and Porto and its airport are just an hour's drive, making it easily accessible for international guests.",
     "amenitiesTitle": "What This Place Offers"
   },
   "amenities": {
@@ -45,7 +45,7 @@
     "title": "Gallery",
     "categories": {
       "all": "All",
-      "bedrooms": "Bedrooms",
+      "bedrooms": "Bedrooms & Bathroom",
       "living": "Kitchen & Living",
       "outdoor": "Outdoor",
       "nature": "Nature"
@@ -54,20 +54,18 @@
   "reviews": {
     "title": "What Our Guests Say",
     "rating": "9.6/10 Exceptional",
-    "review1": {
-      "text": "We went on a family holiday and took our two little dogs and we loved it! The area around the house (native forest) is magnificent, the space is super comfortable and cosy! We had everything we needed. We even had the chance to sip our hot coffee at one of the little tables by the lake. We'll definitely be back!",
-      "author": "Ana",
-      "date": "September 2024"
-    },
-    "review2": {
-      "text": "We liked the whole house, but our favourite part was the pool, where we had an amazing time as a family with our pets. The pool isn't very deep, it's the perfect height.",
-      "author": "Bebiana",
-      "date": "July 2024"
-    },
-    "review3": {
-      "text": "Maybe not for everyone but we experienced the house and surroundings as a little paradise. The house has character and the whole lot around it is beautiful. It is quiet and has lots of space. The pool is a real pool, and not an enlarged sort of bath tub. A beautiful view is included.",
-      "author": "Fennis",
-      "date": "June 2025"
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "translateTo": "Translate to {{language}}",
+    "translatedFrom": "Translated from {{language}} • Show original",
+    "scoreLabel": "Rated {{score}} out of 10",
+    "languages": {
+      "EN-GB": "English",
+      "PT-PT": "Portuguese",
+      "FR": "French",
+      "ES": "Spanish",
+      "DE": "German",
+      "NL": "Dutch"
     }
   },
   "faq": {
@@ -99,7 +97,7 @@
       },
       {
         "question": "What's nearby?",
-        "answer": "Castelo de Paiva center is 4.1 km away. Nearby restaurants and cafés include O Compadre Restaurant (6 km), Café Central (6 km), and Confeitaria Tropicália (6 km). Tourist attractions include Castelo de Santa Maria da Feira (34 km), Europarque (37 km), and Rio Douro (44 km)."
+        "answer": "Castelo de Paiva center is 4.1 km away. Nearby restaurants and cafés include O Compadre Restaurant (6 km), Café Central (6 km), and Confeitaria Tropicália (6 km). For a swim in the Douro, the Praia Fluvial do Pedorido river beach — with a riverside café and picnic areas — is a 12-minute drive. The famous Paiva Walkways and the 516 Arouca suspension bridge in the Arouca Geopark make a great day out, and Porto is about an hour away by car."
       },
       {
         "question": "What languages does the host speak?",
@@ -109,15 +107,25 @@
   },
   "location": {
     "title": "Location",
-    "description": "Situated in the scenic Portuguese countryside of Castelo de Paiva, our property offers the perfect balance of seclusion and accessibility. Just 1 hour from Porto and close to the Douro River.",
-    "mapPlaceholder": "Interactive map coming soon",
+    "description": "Set within roughly a hectare (2.5 acres) of private grounds — gardens, fruit trees, terraces, and native forest — in the scenic Portuguese countryside of Castelo de Paiva, the property offers the perfect balance of seclusion and accessibility. Just 1 hour from Porto and close to the Douro River.",
+    "mapPlaceholder": "Interactive map of the property coming soon",
     "address": "Casal da Renda, Paraíso, Castelo de Paiva, Portugal"
+  },
+  "booking": {
+    "title": "Book Your Stay",
+    "description": "Check availability and book directly on your preferred platform",
+    "airbnb": "Book on Airbnb",
+    "bookingCom": "Book on Booking.com"
   },
   "calendar": {
     "title": "Availability",
     "description": "Check available dates and book your stay",
     "cta": "Check Availability on Airbnb",
-    "placeholder": "Calendar integration coming soon"
+    "placeholder": "Calendar integration coming soon",
+    "available": "Available",
+    "booked": "Booked",
+    "prevMonth": "Previous month",
+    "nextMonth": "Next month"
   },
   "footer": {
     "contact": "Contact Us",

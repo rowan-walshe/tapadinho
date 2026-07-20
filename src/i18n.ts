@@ -18,9 +18,15 @@ i18n
       escapeValue: false,
     },
     detection: {
-      order: ["localStorage", "navigator"],
+      order: ["querystring", "localStorage", "navigator"],
       caches: ["localStorage"],
     },
   });
+
+// Keep <html lang> in sync for accessibility and SEO
+i18n.on("languageChanged", (lng) => {
+  document.documentElement.lang = lng;
+});
+document.documentElement.lang = i18n.resolvedLanguage ?? i18n.language;
 
 export default i18n;

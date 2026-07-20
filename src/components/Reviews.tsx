@@ -15,15 +15,6 @@ const LANGUAGE_MAP: Record<string, string> = {
   pt: "PT-PT",
 };
 
-const LANGUAGE_NAMES: Record<string, string> = {
-  "EN-GB": "English",
-  "PT-PT": "Portuguese",
-  FR: "French",
-  ES: "Spanish",
-  DE: "German",
-  NL: "Dutch",
-};
-
 const CARD_WIDTH = 320; // w-80 = 20rem = 320px
 const GAP = 32; // gap-8 = 2rem = 32px
 
@@ -152,16 +143,20 @@ export function Reviews() {
     setTouchStart(null);
   };
 
+  const language = i18n.resolvedLanguage ?? i18n.language;
+
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString(i18n.language, {
+    // Parse as local time; new Date("YYYY-MM-DD") is UTC midnight and can
+    // display the previous month in timezones behind UTC
+    const [year, month] = dateString.split("-").map(Number);
+    return new Date(year, month - 1).toLocaleDateString(language, {
       year: "numeric",
       month: "long",
     });
   };
 
   const getReviewText = (review: Review, index: number) => {
-    const currentLang = LANGUAGE_MAP[i18n.language] || "EN-GB";
+    const currentLang = LANGUAGE_MAP[language] || "EN-GB";
     const isShowingOriginal = showOriginal[index];
 
     if (isShowingOriginal) {
@@ -174,7 +169,7 @@ export function Reviews() {
   };
 
   const isTranslated = (review: Review) => {
-    const currentLang = LANGUAGE_MAP[i18n.language] || "EN-GB";
+    const currentLang = LANGUAGE_MAP[language] || "EN-GB";
     return review.originalLanguage !== currentLang;
   };
 
@@ -187,11 +182,16 @@ export function Reviews() {
 
   const renderStars = (score: number) => {
     return (
-      <div className="flex text-amber-500 mb-4">
+      <div
+        className="flex text-amber-500 mb-4"
+        role="img"
+        aria-label={t("reviews.scoreLabel", { score })}
+      >
         {[...Array(5)].map((_, i) => (
           <svg
             key={i}
             className="w-5 h-5"
+            aria-hidden="true"
             fill={i < score / 2 ? "currentColor" : "none"}
             stroke="currentColor"
             viewBox="0 0 20 20"
@@ -204,7 +204,7 @@ export function Reviews() {
   };
 
   const renderReviewCard = (review: Review, index: number, key: string) => {
-    const currentLang = LANGUAGE_MAP[i18n.language] || "EN-GB";
+    const currentLang = LANGUAGE_MAP[language] || "EN-GB";
     const translated = isTranslated(review);
     const isShowingOriginal = showOriginal[index];
     const isExpanded = expandedReviews[index];
@@ -229,7 +229,7 @@ export function Reviews() {
             onClick={() => toggleExpanded(index)}
             className="text-xs text-amber-600 hover:text-amber-700 mb-4 transition-colors font-medium"
           >
-            {isExpanded ? "Show less" : "Show more"}
+            {isExpanded ? t("reviews.showLess") : t("reviews.showMore")}
           </button>
         )}
 
@@ -239,8 +239,12 @@ export function Reviews() {
             className="block text-xs text-stone-400 hover:text-stone-600 mb-4 transition-colors"
           >
             {isShowingOriginal
-              ? `Translate to ${LANGUAGE_NAMES[currentLang] || "English"}`
-              : `Translated from ${LANGUAGE_NAMES[review.originalLanguage]} • Show original`}
+              ? t("reviews.translateTo", {
+                  language: t(`reviews.languages.${currentLang}`),
+                })
+              : t("reviews.translatedFrom", {
+                  language: t(`reviews.languages.${review.originalLanguage}`),
+                })}
           </button>
         )}
 

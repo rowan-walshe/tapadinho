@@ -127,9 +127,26 @@ export const bookings: Booking[] = [
   },
 ];
 
+// Format a Date as YYYY-MM-DD using local time. Never use toISOString()
+// for calendar dates: it converts to UTC, which shifts the day for
+// visitors in other timezones.
+export function formatLocalDate(date: Date): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+// Parse a YYYY-MM-DD string as a local-time Date (new Date("YYYY-MM-DD")
+// would parse it as UTC midnight)
+function parseLocalDate(dateStr: string): Date {
+  const [year, month, day] = dateStr.split("-").map(Number);
+  return new Date(year, month - 1, day);
+}
+
 // Helper function to check if a date falls within any booking
 export function isDateBooked(date: Date, bookingsList: Booking[]): boolean {
-  const dateStr = date.toISOString().split("T")[0];
+  const dateStr = formatLocalDate(date);
 
   return bookingsList.some((booking) => {
     return dateStr >= booking.start && dateStr < booking.end;
@@ -158,15 +175,15 @@ export function getBookedDatesForMonth(
   const bookedDates = new Set<string>();
 
   bookingsList.forEach((booking) => {
-    const start = new Date(booking.start);
-    const end = new Date(booking.end);
+    const start = parseLocalDate(booking.start);
+    const end = parseLocalDate(booking.end);
 
     // Get all dates in the booking range
     const dates = getDatesInRange(start, end);
 
     dates.forEach((date) => {
       if (date.getFullYear() === year && date.getMonth() === month) {
-        bookedDates.add(date.toISOString().split("T")[0]);
+        bookedDates.add(formatLocalDate(date));
       }
     });
   });
